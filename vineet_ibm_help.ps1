@@ -7,7 +7,7 @@ $logfile = "C:\Users\pandeyv\Downloads\actions.log"
 
 #--------------Funtions to be used later (these are user defined functions)
 function Write-Log($msg, $logfile){
-  $timestamp = Get-Date -Format "[MM:dd:yyyy]"
+  $timestamp = Get-Date -Format "[HH:mm MMddyy]"
   Write-Output "$timestamp $msg"
   "$timestamp $msg" | Out-File -FilePath $logfile -Append
 }
